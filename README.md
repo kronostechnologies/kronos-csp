@@ -1,7 +1,7 @@
 kronos-csp
 ==========
 
-A PHP [Content-Security-Policy](https://developer.mozilla.org/fr/docs/HTTP/Headers/Content-Security-Policy) header generator library.
+A PHP [Content-Security-Policy](https://developer.mozilla.org/docs/HTTP/Headers/Content-Security-Policy) header generator library.
 
 Usage
 -----
