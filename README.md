@@ -6,7 +6,7 @@ A PHP [Content-Security-Policy](https://developer.mozilla.org/docs/HTTP/Headers/
 Usage
 -----
 
-###Using the `Builder`:
+### Using the `Builder`:
 
 ```php
 
@@ -21,7 +21,7 @@ header($policy->getHeader());
 ```
 
 
-###Using the `PolicyDirectorInterface`:
+### Using the `PolicyDirectorInterface`:
 
 Director class:
 
