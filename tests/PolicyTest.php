@@ -96,6 +96,7 @@ class PolicyTest extends \PHPUnit_Framework_TestCase
         $expected = "/'.+'/";
 
         $this->assertRegExp($expected, Policy::FETCH_NONE);
+        $this->assertRegExp($expected, Policy::FETCH_REPORT_SAMPLE);
         $this->assertRegExp($expected, Policy::FETCH_SELF);
         $this->assertRegExp($expected, Policy::FETCH_STRICT_DYNAMIC);
         $this->assertRegExp($expected, Policy::FETCH_UNSAFE_EVAL);

@@ -9,11 +9,12 @@ class Policy
     const HEADER_NAME_REPORT_ONLY = 'Content-Security-Policy-Report-Only: ';
     const VALUE_SEPARATOR = '; ';
 
+    const FETCH_NONE = "'none'";
+    const FETCH_REPORT_SAMPLE = "'report-sample'";
     const FETCH_SELF = "'self'";
+    const FETCH_STRICT_DYNAMIC = "'strict-dynamic'";
     const FETCH_UNSAFE_INLINE = "'unsafe-inline'";
     const FETCH_UNSAFE_EVAL = "'unsafe-eval'";
-    const FETCH_NONE = "'none'";
-    const FETCH_STRICT_DYNAMIC = "'strict-dynamic'";
 
     const DOCUMENT_SANDBOX_ALLOW_FORMS = 'allow-forms';
     const DOCUMENT_SANDBOX_ALLOW_MODALS = 'allow-modals';
