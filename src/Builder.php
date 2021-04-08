@@ -186,6 +186,38 @@ class Builder
     }
 
     /**
+     * @param array $script_src_elem
+     */
+    public function setScriptSrcElem(array $script_src_elem = [])
+    {
+        $this->policy->script_src_elem = $script_src_elem;
+    }
+
+    /**
+     * @param string $script_src_elem
+     */
+    public function addScriptSrcElem($script_src_elem)
+    {
+        $this->policy->script_src_elem[] = $script_src_elem;
+    }
+
+    /**
+     * @param array $script_src_attr
+     */
+    public function setScriptSrcAttr(array $script_src_attr = [])
+    {
+        $this->policy->script_src_attr = $script_src_attr;
+    }
+
+    /**
+     * @param string $script_src_attr
+     */
+    public function addScriptSrcAttr($script_src_attr)
+    {
+        $this->policy->script_src_attr[] = $script_src_attr;
+    }
+
+    /**
      * @param array $style_src
      */
     public function setStyleSrc(array $style_src = [])
@@ -199,6 +231,38 @@ class Builder
     public function addStyleSrc($style_src)
     {
         $this->policy->style_src[] = $style_src;
+    }
+
+    /**
+     * @param array $style_src_elem
+     */
+    public function setStyleSrcElem(array $style_src_elem = [])
+    {
+        $this->policy->style_src_elem = $style_src_elem;
+    }
+
+    /**
+     * @param string $style_src_elem
+     */
+    public function addStyleSrcElem($style_src_elem)
+    {
+        $this->policy->style_src_elem[] = $style_src_elem;
+    }
+
+    /**
+     * @param array $style_src_attr
+     */
+    public function setStyleSrcAttr(array $style_src_attr = [])
+    {
+        $this->policy->style_src_attr = $style_src_attr;
+    }
+
+    /**
+     * @param string $style_src_attr
+     */
+    public function addStyleSrcAttr($style_src_attr)
+    {
+        $this->policy->style_src_attr[] = $style_src_attr;
     }
 
     /**
