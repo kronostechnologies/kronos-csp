@@ -213,6 +213,42 @@ class BuilderTest extends \PHPUnit_Framework_TestCase
         $this->assertSame(self::AN_ARRAY_WITH_A_URI, $this->policy->script_src);
     }
 
+    public function test_setScriptSrcElem_replacesPolicyScriptSrcElem()
+    {
+        $this->policy->script_src_elem = self::AN_ARRAY;
+
+        $this->builder->setScriptSrcElem(self::REPLACEMENT_ARRAY);
+
+        $this->assertSame(self::REPLACEMENT_ARRAY, $this->policy->script_src_elem);
+    }
+
+    public function test_addScriptSrcElem_addsPolicyScriptSrcElem()
+    {
+        $this->policy->script_src_elem = self::AN_ARRAY;
+
+        $this->builder->addScriptSrcElem(self::A_URI);
+
+        $this->assertSame(self::AN_ARRAY_WITH_A_URI, $this->policy->script_src_elem);
+    }
+
+    public function test_setScriptSrcAttr_replacesPolicyScriptSrcAttr()
+    {
+        $this->policy->script_src_attr = self::AN_ARRAY;
+
+        $this->builder->setScriptSrcAttr(self::REPLACEMENT_ARRAY);
+
+        $this->assertSame(self::REPLACEMENT_ARRAY, $this->policy->script_src_attr);
+    }
+
+    public function test_addScriptSrcAttr_addsPolicyScriptSrcAttr()
+    {
+        $this->policy->script_src_attr = self::AN_ARRAY;
+
+        $this->builder->addScriptSrcAttr(self::A_URI);
+
+        $this->assertSame(self::AN_ARRAY_WITH_A_URI, $this->policy->script_src_attr);
+    }
+
     public function test_setStyleSrc_replacesPolicyStyleSrc()
     {
         $this->policy->style_src = self::AN_ARRAY;
@@ -229,6 +265,42 @@ class BuilderTest extends \PHPUnit_Framework_TestCase
         $this->builder->addStyleSrc(self::A_URI);
 
         $this->assertSame(self::AN_ARRAY_WITH_A_URI, $this->policy->style_src);
+    }
+
+    public function test_setStyleSrcElem_replacesPolicyStyleSrcElem()
+    {
+        $this->policy->style_src_elem = self::AN_ARRAY;
+
+        $this->builder->setStyleSrcElem(self::REPLACEMENT_ARRAY);
+
+        $this->assertSame(self::REPLACEMENT_ARRAY, $this->policy->style_src_elem);
+    }
+
+    public function test_addStyleSrcElem_addsPolicyStyleSrcElem()
+    {
+        $this->policy->style_src_elem = self::AN_ARRAY;
+
+        $this->builder->addStyleSrcElem(self::A_URI);
+
+        $this->assertSame(self::AN_ARRAY_WITH_A_URI, $this->policy->style_src_elem);
+    }
+
+    public function test_setStyleSrcAttr_replacesPolicyStyleSrcAttr()
+    {
+        $this->policy->style_src_attr = self::AN_ARRAY;
+
+        $this->builder->setStyleSrcAttr(self::REPLACEMENT_ARRAY);
+
+        $this->assertSame(self::REPLACEMENT_ARRAY, $this->policy->style_src_attr);
+    }
+
+    public function test_addStyleSrcAttr_addsPolicyStyleSrcAttr()
+    {
+        $this->policy->style_src_attr = self::AN_ARRAY;
+
+        $this->builder->addStyleSrcAttr(self::A_URI);
+
+        $this->assertSame(self::AN_ARRAY_WITH_A_URI, $this->policy->style_src_attr);
     }
 
     public function test_setWorkerSrc_replacesPolicyWorkerSrc()

@@ -41,7 +41,11 @@ class Policy
     public $media_src = [];
     public $object_src = [];
     public $script_src = [];
+    public $script_src_elem = [];
+    public $script_src_attr = [];
     public $style_src = [];
+    public $style_src_elem = [];
+    public $style_src_attr = [];
     public $worker_src = [];
 
     /* Document directives */
