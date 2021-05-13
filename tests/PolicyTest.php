@@ -3,8 +3,9 @@
 namespace Kronos\Tests\ContentSecurityPolicy;
 
 use Kronos\ContentSecurityPolicy\Policy;
+use PHPUnit\Framework\TestCase;
 
-class PolicyTest extends \PHPUnit_Framework_TestCase
+class PolicyTest extends TestCase
 {
 
     const CSP_HEADER = 'Content-Security-Policy: ';
@@ -15,7 +16,7 @@ class PolicyTest extends \PHPUnit_Framework_TestCase
     /** @var  Policy */
     protected $policy;
 
-    protected function setUp()
+    protected function setUp() : void
     {
         $this->policy = new Policy();
     }
