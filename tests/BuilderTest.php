@@ -4,8 +4,9 @@ namespace Kronos\Tests\ContentSecurityPolicy;
 
 use Kronos\ContentSecurityPolicy\Builder;
 use Kronos\ContentSecurityPolicy\Policy;
+use PHPUnit\Framework\TestCase;
 
-class BuilderTest extends \PHPUnit_Framework_TestCase
+class BuilderTest extends TestCase
 {
 
     const AN_ARRAY = ['kronos-web.com/fna/', 'example.test'];
@@ -20,7 +21,7 @@ class BuilderTest extends \PHPUnit_Framework_TestCase
     /** @var  Builder */
     private $builder;
 
-    protected function setUp()
+    protected function setUp() : void
     {
         $this->policy = new Policy();
         $this->builder = new Builder($this->policy);
