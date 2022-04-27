@@ -13,4 +13,4 @@ jobs:
       php-version: '7.4'
       extensions: pcov
     secrets:
-      gpr-key: ${{ secrets.GPR_KEY }}
+      GPR_KEY: ${{ secrets.GPR_KEY }}
