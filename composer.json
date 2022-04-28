@@ -25,6 +25,13 @@
 	"require-dev": {
 		"phpunit/phpunit": "^8.5",
 		"dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
-		"phpcompatibility/php-compatibility": "^9.3"
+		"phpcompatibility/php-compatibility": "^9.3",
+		"vimeo/psalm": "4.22.0"
+	},
+	"config": {
+		"allow-plugins": {
+			"composer/package-versions-deprecated": true,
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		}
 	}
 }
