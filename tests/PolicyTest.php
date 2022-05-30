@@ -13,8 +13,7 @@ class PolicyTest extends TestCase
     const SOME_DEFAULT_SRC = ['github.com', 'packagist.org'];
     const SOME_REPORT_URI = 'example.test/report';
 
-    /** @var  Policy */
-    protected $policy;
+    protected Policy $policy;
 
     protected function setUp() : void
     {
@@ -36,7 +35,7 @@ class PolicyTest extends TestCase
         $actual = $this->policy->getHeader();
 
         $excepted = '/^' . self::CSP_HEADER . '.+/';
-        $this->assertRegExp($excepted, $actual);
+        $this->assertMatchesRegularExpression($excepted, $actual);
     }
 
     public function test_reportOnlyAndAtLeastOneDirective_getHeader_hasReportOnlyHeader()
@@ -47,7 +46,7 @@ class PolicyTest extends TestCase
         $actual = $this->policy->getHeader();
 
         $excepted = '/^' . self::CSP_HEADER_REPORT_ONLY . '.+/';
-        $this->assertRegExp($excepted, $actual);
+        $this->assertMatchesRegularExpression($excepted, $actual);
     }
 
     public function test_arrayDirective_getHeader_outputDirectiveAfterHeaderValuesSeparatedWithSpacesAndUnderscoresReplacedWithDashes(
@@ -96,12 +95,12 @@ class PolicyTest extends TestCase
     {
         $expected = "/'.+'/";
 
-        $this->assertRegExp($expected, Policy::FETCH_NONE);
-        $this->assertRegExp($expected, Policy::FETCH_REPORT_SAMPLE);
-        $this->assertRegExp($expected, Policy::FETCH_SELF);
-        $this->assertRegExp($expected, Policy::FETCH_STRICT_DYNAMIC);
-        $this->assertRegExp($expected, Policy::FETCH_UNSAFE_EVAL);
-        $this->assertRegExp($expected, Policy::FETCH_UNSAFE_INLINE);
+        $this->assertMatchesRegularExpression($expected, Policy::FETCH_NONE);
+        $this->assertMatchesRegularExpression($expected, Policy::FETCH_REPORT_SAMPLE);
+        $this->assertMatchesRegularExpression($expected, Policy::FETCH_SELF);
+        $this->assertMatchesRegularExpression($expected, Policy::FETCH_STRICT_DYNAMIC);
+        $this->assertMatchesRegularExpression($expected, Policy::FETCH_UNSAFE_EVAL);
+        $this->assertMatchesRegularExpression($expected, Policy::FETCH_UNSAFE_INLINE);
     }
 
 }
