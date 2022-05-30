@@ -5,9 +5,6 @@ namespace Kronos\ContentSecurityPolicy;
 interface PolicyDirectorInterface
 {
 
-    /**
-     * @return Policy
-     */
-    public function buildContentSecurityPolicy();
+    public function buildContentSecurityPolicy(): Policy;
 
 }

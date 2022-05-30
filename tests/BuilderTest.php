@@ -15,11 +15,9 @@ class BuilderTest extends TestCase
     const OLD_URI = 'old.src.uri';
     const AN_ARRAY_WITH_A_URI = ['kronos-web.com/fna/', 'example.test', 'new.src.uri'];
 
-    /** @var  Policy */
-    private $policy;
+    private Policy $policy;
 
-    /** @var  Builder */
-    private $builder;
+    private Builder $builder;
 
     protected function setUp() : void
     {

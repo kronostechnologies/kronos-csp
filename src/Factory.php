@@ -5,19 +5,13 @@ namespace Kronos\ContentSecurityPolicy;
 class Factory
 {
 
-    /**
-     * @return Builder
-     */
-    public function createContentSecurityPolicyBuilder()
+    public function createContentSecurityPolicyBuilder(): Builder
     {
         $policy = $this->createContentSecurityPolicyDTO();
         return new Builder($policy);
     }
 
-    /**
-     * @return Policy
-     */
-    protected function createContentSecurityPolicyDTO()
+    protected function createContentSecurityPolicyDTO(): Policy
     {
         return new Policy();
     }

@@ -31,42 +31,42 @@ class Policy
     const OTHER_REQUIRE_SRI_FOR_STYLE = 'style';
 
     /* Fetch directives */
-    public $default_src = [];
-    public $child_src = [];
-    public $connect_src = [];
-    public $font_src = [];
-    public $frame_src = [];
-    public $img_src = [];
-    public $manifest_src = [];
-    public $media_src = [];
-    public $object_src = [];
-    public $script_src = [];
-    public $script_src_elem = [];
-    public $script_src_attr = [];
-    public $style_src = [];
-    public $style_src_elem = [];
-    public $style_src_attr = [];
-    public $worker_src = [];
+    public array $default_src = [];
+    public array $child_src = [];
+    public array $connect_src = [];
+    public array $font_src = [];
+    public array $frame_src = [];
+    public array $img_src = [];
+    public array $manifest_src = [];
+    public array $media_src = [];
+    public array $object_src = [];
+    public array $script_src = [];
+    public array $script_src_elem = [];
+    public array $script_src_attr = [];
+    public array $style_src = [];
+    public array $style_src_elem = [];
+    public array $style_src_attr = [];
+    public array $worker_src = [];
 
     /* Document directives */
-    public $base_uri = [];
-    public $plugin_types = [];
-    public $sandbox = [];
+    public array $base_uri = [];
+    public array $plugin_types = [];
+    public array $sandbox = [];
 
     /* Navigation directives */
-    public $form_action = [];
-    public $frame_ancestors = [];
+    public array $form_action = [];
+    public array $frame_ancestors = [];
 
     /* Reporting directives */
-    public $report_only = false;
-    public $report_uri = '';
+    public bool $report_only = false;
+    public string $report_uri = '';
 
     /* Other directives */
-    public $block_all_mixed_content = false;
-    public $require_sri_for = [];
-    public $upgrade_insecure_requests = false;
+    public bool $block_all_mixed_content = false;
+    public array $require_sri_for = [];
+    public bool $upgrade_insecure_requests = false;
 
-    public function getHeader()
+    public function getHeader(): string
     {
         $directives = [];
 
@@ -83,7 +83,7 @@ class Policy
                     $directives[] = $directive . ' ' . implode(' ', $value);
                 } elseif (is_string($value)) {
                     $directives[] = $directive . ' ' . $value;
-                } elseif ($value === true) {
+                } else {
                     $directives[] = $directive;
                 }
             }
