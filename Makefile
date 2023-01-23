@@ -8,7 +8,7 @@ DOCKER_PHP = docker run -it --rm \
     -v ~/.cache:/home/circleci/.cache --user "${USER_ID}:${GROUP_ID}" \
     --workdir /home/circleci/project \
     -e HOME=/home/circleci \
-    ghcr.io/kronostechnologies/php:7.4-node
+    ghcr.io/kronostechnologies/php:8.1
 
 .PHONY: all
 all: setup check test
@@ -29,6 +29,14 @@ bom:
 .PHONY: psalm
 psalm:
 	@${DOCKER_PHP} ./vendor/bin/psalm $(PSALM_ARGS)
+
+.PHONY: psalm.ignoreBaseline
+psalm.ignoreBaseline:
+	@${DOCKER_PHP} ./vendor/bin/psalm --ignore-baseline $(PSALM_ARGS)
+
+.PHONY: psalm.updateBaseline
+psalm.updateBaseline:
+	@${DOCKER_PHP} ./vendor/bin/psalm --no-diff --no-cache --update-baseline $(PSALM_ARGS)
 
 .PHONY: test
 test:

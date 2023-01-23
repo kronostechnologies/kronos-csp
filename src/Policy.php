@@ -4,31 +4,30 @@ namespace Kronos\ContentSecurityPolicy;
 
 class Policy
 {
+    public const HEADER_NAME = 'Content-Security-Policy: ';
+    public const HEADER_NAME_REPORT_ONLY = 'Content-Security-Policy-Report-Only: ';
+    public const VALUE_SEPARATOR = '; ';
 
-    const HEADER_NAME = 'Content-Security-Policy: ';
-    const HEADER_NAME_REPORT_ONLY = 'Content-Security-Policy-Report-Only: ';
-    const VALUE_SEPARATOR = '; ';
+    public const FETCH_NONE = "'none'";
+    public const FETCH_REPORT_SAMPLE = "'report-sample'";
+    public const FETCH_SELF = "'self'";
+    public const FETCH_STRICT_DYNAMIC = "'strict-dynamic'";
+    public const FETCH_UNSAFE_INLINE = "'unsafe-inline'";
+    public const FETCH_UNSAFE_EVAL = "'unsafe-eval'";
 
-    const FETCH_NONE = "'none'";
-    const FETCH_REPORT_SAMPLE = "'report-sample'";
-    const FETCH_SELF = "'self'";
-    const FETCH_STRICT_DYNAMIC = "'strict-dynamic'";
-    const FETCH_UNSAFE_INLINE = "'unsafe-inline'";
-    const FETCH_UNSAFE_EVAL = "'unsafe-eval'";
+    public const DOCUMENT_SANDBOX_ALLOW_FORMS = 'allow-forms';
+    public const DOCUMENT_SANDBOX_ALLOW_MODALS = 'allow-modals';
+    public const DOCUMENT_SANDBOX_ALLOW_ORIENTATION_LOCK = 'allow-orientation-lock';
+    public const DOCUMENT_SANDBOX_ALLOW_POINTER_LOCK = 'allow-pointer-lock';
+    public const DOCUMENT_SANDBOX_ALLOW_POPUPS = 'allow-popups';
+    public const DOCUMENT_SANDBOX_ALLOW_POPUPS_TO_ESCAPE_SANDBOX = 'allow-popups-to-escape-sandbox';
+    public const DOCUMENT_SANDBOX_ALLOW_PRESENTATION = 'allow-presentation';
+    public const DOCUMENT_SANDBOX_ALLOW_SAME_ORIGIN = 'allow-same-origin';
+    public const DOCUMENT_SANDBOX_ALLOW_SCRIPTS = 'allow-scripts';
+    public const DOCUMENT_SANDBOX_ALLOW_TOP_NAVIGATION = 'allow-top-navigation';
 
-    const DOCUMENT_SANDBOX_ALLOW_FORMS = 'allow-forms';
-    const DOCUMENT_SANDBOX_ALLOW_MODALS = 'allow-modals';
-    const DOCUMENT_SANDBOX_ALLOW_ORIENTATION_LOCK = 'allow-orientation-lock';
-    const DOCUMENT_SANDBOX_ALLOW_POINTER_LOCK = 'allow-pointer-lock';
-    const DOCUMENT_SANDBOX_ALLOW_POPUPS = 'allow-popups';
-    const DOCUMENT_SANDBOX_ALLOW_POPUPS_TO_ESCAPE_SANDBOX = 'allow-popups-to-escape-sandbox';
-    const DOCUMENT_SANDBOX_ALLOW_PRESENTATION = 'allow-presentation';
-    const DOCUMENT_SANDBOX_ALLOW_SAME_ORIGIN = 'allow-same-origin';
-    const DOCUMENT_SANDBOX_ALLOW_SCRIPTS = 'allow-scripts';
-    const DOCUMENT_SANDBOX_ALLOW_TOP_NAVIGATION = 'allow-top-navigation';
-
-    const OTHER_REQUIRE_SRI_FOR_SCRIPT = 'script';
-    const OTHER_REQUIRE_SRI_FOR_STYLE = 'style';
+    public const OTHER_REQUIRE_SRI_FOR_SCRIPT = 'script';
+    public const OTHER_REQUIRE_SRI_FOR_STYLE = 'style';
 
     /* Fetch directives */
     public array $default_src = [];
@@ -98,5 +97,4 @@ class Policy
             return '';
         }
     }
-
 }

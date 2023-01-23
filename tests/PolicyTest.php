@@ -7,15 +7,14 @@ use PHPUnit\Framework\TestCase;
 
 class PolicyTest extends TestCase
 {
-
-    const CSP_HEADER = 'Content-Security-Policy: ';
-    const CSP_HEADER_REPORT_ONLY = 'Content-Security-Policy-Report-Only: ';
-    const SOME_DEFAULT_SRC = ['github.com', 'packagist.org'];
-    const SOME_REPORT_URI = 'example.test/report';
+    private const CSP_HEADER = 'Content-Security-Policy: ';
+    private const CSP_HEADER_REPORT_ONLY = 'Content-Security-Policy-Report-Only: ';
+    private const SOME_DEFAULT_SRC = ['github.com', 'packagist.org'];
+    private const SOME_REPORT_URI = 'example.test/report';
 
     protected Policy $policy;
 
-    protected function setUp() : void
+    protected function setUp(): void
     {
         $this->policy = new Policy();
     }
@@ -49,8 +48,7 @@ class PolicyTest extends TestCase
         $this->assertMatchesRegularExpression($excepted, $actual);
     }
 
-    public function test_arrayDirective_getHeader_outputDirectiveAfterHeaderValuesSeparatedWithSpacesAndUnderscoresReplacedWithDashes(
-    )
+    public function test_arrayDirective_getHeader_outputDirectiveAfterHeaderValuesSeparatedWithSpacesAndUnderscores()
     {
         $this->policy->default_src = self::SOME_DEFAULT_SRC;
 
@@ -102,5 +100,4 @@ class PolicyTest extends TestCase
         $this->assertMatchesRegularExpression($expected, Policy::FETCH_UNSAFE_EVAL);
         $this->assertMatchesRegularExpression($expected, Policy::FETCH_UNSAFE_INLINE);
     }
-
 }

@@ -8,18 +8,17 @@ use PHPUnit\Framework\TestCase;
 
 class BuilderTest extends TestCase
 {
-
-    const AN_ARRAY = ['kronos-web.com/fna/', 'example.test'];
-    const REPLACEMENT_ARRAY = ['fonts.website.test'];
-    const A_URI = 'new.src.uri';
-    const OLD_URI = 'old.src.uri';
-    const AN_ARRAY_WITH_A_URI = ['kronos-web.com/fna/', 'example.test', 'new.src.uri'];
+    private const AN_ARRAY = ['kronos-web.com/fna/', 'example.test'];
+    private const REPLACEMENT_ARRAY = ['fonts.website.test'];
+    private const A_URI = 'new.src.uri';
+    private const OLD_URI = 'old.src.uri';
+    private const AN_ARRAY_WITH_A_URI = ['kronos-web.com/fna/', 'example.test', 'new.src.uri'];
 
     private Policy $policy;
 
     private Builder $builder;
 
-    protected function setUp() : void
+    protected function setUp(): void
     {
         $this->policy = new Policy();
         $this->builder = new Builder($this->policy);
@@ -490,5 +489,4 @@ class BuilderTest extends TestCase
 
         $this->assertFalse($this->policy->upgrade_insecure_requests);
     }
-
 }
