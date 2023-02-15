@@ -4,3 +4,4 @@ build/
 
 # phpunit
 .phpunit.result.cache
+.phpunit.cache/
