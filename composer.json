@@ -32,6 +32,9 @@
     "kronostechnologies/php-coding-standard": "2.0.0"
   },
   "config": {
+    "platform": {
+      "php": "8.1"
+    },
     "allow-plugins": {
       "composer/package-versions-deprecated": true,
       "dealerdirect/phpcodesniffer-composer-installer": true,
