@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" backupGlobals="false" colors="true" bootstrap="./vendor/autoload.php" xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.0/phpunit.xsd" cacheDirectory=".phpunit.cache" backupStaticProperties="false">
-  <coverage includeUncoveredFiles="false">
-    <include>
-      <directory suffix=".php">./src/</directory>
-    </include>
-  </coverage>
-  <testsuites>
-    <testsuite name="Kronos-Content-Security-Policy">
-      <directory>./tests</directory>
-    </testsuite>
-  </testsuites>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    backupGlobals="false"
+    colors="true"
+    bootstrap="./vendor/autoload.php"
+    xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.0/phpunit.xsd"
+    cacheDirectory=".phpunit.cache"
+    backupStaticProperties="false">
+    <testsuites>
+        <testsuite name="Kronos-Content-Security-Policy">
+            <directory>./tests</directory>
+        </testsuite>
+    </testsuites>
+    <source>
+        <include>
+            <directory suffix=".php">./src/</directory>
+        </include>
+    </source>
 </phpunit>
