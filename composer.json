@@ -23,8 +23,8 @@
     "php": "^8.3"
   },
   "require-dev": {
-    "phpunit/phpunit": "12.2.3",
-    "dealerdirect/phpcodesniffer-composer-installer": "1.0.0",
+    "phpunit/phpunit": "12.2.5",
+    "dealerdirect/phpcodesniffer-composer-installer": "1.1.1",
     "phpcompatibility/php-compatibility": "9.3.5",
     "vimeo/psalm": "6.12.0",
     "cyclonedx/cyclonedx-php-composer": "5.2.3",
