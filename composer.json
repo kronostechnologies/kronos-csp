@@ -23,12 +23,12 @@
     "php": "^8.4"
   },
   "require-dev": {
-    "phpunit/phpunit": "12.4.2",
-    "dealerdirect/phpcodesniffer-composer-installer": "1.1.2",
+    "phpunit/phpunit": "12.4.3",
+    "dealerdirect/phpcodesniffer-composer-installer": "1.2.0",
     "phpcompatibility/php-compatibility": "dev-develop#8daeec54772a592ad369be23ae02ed593c71e7f1 as 10.0.0",
     "vimeo/psalm": "6.13.1",
     "cyclonedx/cyclonedx-php-composer": "5.3.0",
-    "squizlabs/php_codesniffer": "4.0.0",
+    "squizlabs/php_codesniffer": "4.0.1",
     "kronostechnologies/php-coding-standard": "2.1.0"
   },
   "config": {
