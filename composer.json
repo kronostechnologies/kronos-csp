@@ -27,7 +27,7 @@
     "dealerdirect/phpcodesniffer-composer-installer": "1.2.0",
     "phpcompatibility/php-compatibility": "dev-develop#8daeec54772a592ad369be23ae02ed593c71e7f1 as 10.0.0",
     "vimeo/psalm": "6.14.3",
-    "cyclonedx/cyclonedx-php-composer": "6.0.0",
+    "cyclonedx/cyclonedx-php-composer": "6.1.0",
     "squizlabs/php_codesniffer": "4.0.1",
     "kronostechnologies/php-coding-standard": "2.1.0"
   },
