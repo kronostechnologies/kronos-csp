@@ -1,5 +1,9 @@
 name: PHP Security
 
+permissions:
+  contents: read
+  checks: write
+
 on:
   pull_request: { }
   push:

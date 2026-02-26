@@ -1,4 +1,4 @@
-name: PHP
+name: PHP 8.4
 
 permissions:
   contents: read
@@ -18,5 +18,5 @@ jobs:
     secrets: inherit
     with:
       checks: phpunit,psalm,phpcs
-      php-version: '8.5'
+      php-version: '8.4'
       extensions: pcov
