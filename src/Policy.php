@@ -4,30 +4,30 @@ namespace Kronos\ContentSecurityPolicy;
 
 class Policy
 {
-    public const HEADER_NAME = 'Content-Security-Policy: ';
-    public const HEADER_NAME_REPORT_ONLY = 'Content-Security-Policy-Report-Only: ';
-    public const VALUE_SEPARATOR = '; ';
+    public const string HEADER_NAME = 'Content-Security-Policy: ';
+    public const string HEADER_NAME_REPORT_ONLY = 'Content-Security-Policy-Report-Only: ';
+    public const string VALUE_SEPARATOR = '; ';
 
-    public const FETCH_NONE = "'none'";
-    public const FETCH_REPORT_SAMPLE = "'report-sample'";
-    public const FETCH_SELF = "'self'";
-    public const FETCH_STRICT_DYNAMIC = "'strict-dynamic'";
-    public const FETCH_UNSAFE_INLINE = "'unsafe-inline'";
-    public const FETCH_UNSAFE_EVAL = "'unsafe-eval'";
+    public const string FETCH_NONE = "'none'";
+    public const string FETCH_REPORT_SAMPLE = "'report-sample'";
+    public const string FETCH_SELF = "'self'";
+    public const string FETCH_STRICT_DYNAMIC = "'strict-dynamic'";
+    public const string FETCH_UNSAFE_INLINE = "'unsafe-inline'";
+    public const string FETCH_UNSAFE_EVAL = "'unsafe-eval'";
 
-    public const DOCUMENT_SANDBOX_ALLOW_FORMS = 'allow-forms';
-    public const DOCUMENT_SANDBOX_ALLOW_MODALS = 'allow-modals';
-    public const DOCUMENT_SANDBOX_ALLOW_ORIENTATION_LOCK = 'allow-orientation-lock';
-    public const DOCUMENT_SANDBOX_ALLOW_POINTER_LOCK = 'allow-pointer-lock';
-    public const DOCUMENT_SANDBOX_ALLOW_POPUPS = 'allow-popups';
-    public const DOCUMENT_SANDBOX_ALLOW_POPUPS_TO_ESCAPE_SANDBOX = 'allow-popups-to-escape-sandbox';
-    public const DOCUMENT_SANDBOX_ALLOW_PRESENTATION = 'allow-presentation';
-    public const DOCUMENT_SANDBOX_ALLOW_SAME_ORIGIN = 'allow-same-origin';
-    public const DOCUMENT_SANDBOX_ALLOW_SCRIPTS = 'allow-scripts';
-    public const DOCUMENT_SANDBOX_ALLOW_TOP_NAVIGATION = 'allow-top-navigation';
+    public const string DOCUMENT_SANDBOX_ALLOW_FORMS = 'allow-forms';
+    public const string DOCUMENT_SANDBOX_ALLOW_MODALS = 'allow-modals';
+    public const string DOCUMENT_SANDBOX_ALLOW_ORIENTATION_LOCK = 'allow-orientation-lock';
+    public const string DOCUMENT_SANDBOX_ALLOW_POINTER_LOCK = 'allow-pointer-lock';
+    public const string DOCUMENT_SANDBOX_ALLOW_POPUPS = 'allow-popups';
+    public const string DOCUMENT_SANDBOX_ALLOW_POPUPS_TO_ESCAPE_SANDBOX = 'allow-popups-to-escape-sandbox';
+    public const string DOCUMENT_SANDBOX_ALLOW_PRESENTATION = 'allow-presentation';
+    public const string DOCUMENT_SANDBOX_ALLOW_SAME_ORIGIN = 'allow-same-origin';
+    public const string DOCUMENT_SANDBOX_ALLOW_SCRIPTS = 'allow-scripts';
+    public const string DOCUMENT_SANDBOX_ALLOW_TOP_NAVIGATION = 'allow-top-navigation';
 
-    public const OTHER_REQUIRE_SRI_FOR_SCRIPT = 'script';
-    public const OTHER_REQUIRE_SRI_FOR_STYLE = 'style';
+    public const string OTHER_REQUIRE_SRI_FOR_SCRIPT = 'script';
+    public const string OTHER_REQUIRE_SRI_FOR_STYLE = 'style';
 
     /* Fetch directives */
     public array $default_src = [];
