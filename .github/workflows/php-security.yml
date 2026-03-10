@@ -3,6 +3,7 @@ name: PHP Security
 permissions:
   contents: read
   checks: write
+  security-events: read
 
 on:
   pull_request: { }
